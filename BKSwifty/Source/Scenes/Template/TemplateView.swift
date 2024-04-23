@@ -11,7 +11,7 @@ struct TemplateView: View {
     @State var viewModel: ViewModel
     
     var body: some View {
-        Text("Hello world")
+        Text(viewModel.text)
     }
 }
 

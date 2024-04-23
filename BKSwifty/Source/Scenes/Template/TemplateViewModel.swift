@@ -10,6 +10,8 @@ import Observation
 extension TemplateView {
     @Observable
     class ViewModel {
+        var text = "Hello World"
+        
         init() {
             
         }
