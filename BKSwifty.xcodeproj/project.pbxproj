@@ -19,6 +19,9 @@
 		9C5B40402BD74C1B00EE4BB6 /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B403C2BD74C1B00EE4BB6 /* PeopleCoordinator.swift */; };
 		9C5B40412BD74C1B00EE4BB6 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B403D2BD74C1B00EE4BB6 /* PeopleView.swift */; };
 		9C5B40422BD74C1B00EE4BB6 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B403E2BD74C1B00EE4BB6 /* PeopleViewModel.swift */; };
+		9C5B40472BD862C100EE4BB6 /* PersonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B40432BD862C100EE4BB6 /* PersonCoordinator.swift */; };
+		9C5B40482BD862C100EE4BB6 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B40442BD862C100EE4BB6 /* PersonView.swift */; };
+		9C5B40492BD862C100EE4BB6 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B40452BD862C100EE4BB6 /* PersonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		9C5B403C2BD74C1B00EE4BB6 /* PeopleCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleCoordinator.swift; sourceTree = "<group>"; };
 		9C5B403D2BD74C1B00EE4BB6 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		9C5B403E2BD74C1B00EE4BB6 /* PeopleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		9C5B40432BD862C100EE4BB6 /* PersonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCoordinator.swift; sourceTree = "<group>"; };
+		9C5B40442BD862C100EE4BB6 /* PersonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		9C5B40452BD862C100EE4BB6 /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 		9C5B40342BD74A8800EE4BB6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9C5B40462BD862C100EE4BB6 /* Person */,
 				9C5B403F2BD74C1B00EE4BB6 /* People */,
 				9C5B40382BD74AC700EE4BB6 /* Template */,
 			);
@@ -190,6 +197,16 @@
 				9C5B403E2BD74C1B00EE4BB6 /* PeopleViewModel.swift */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		9C5B40462BD862C100EE4BB6 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B40432BD862C100EE4BB6 /* PersonCoordinator.swift */,
+				9C5B40442BD862C100EE4BB6 /* PersonView.swift */,
+				9C5B40452BD862C100EE4BB6 /* PersonViewModel.swift */,
+			);
+			path = Person;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,11 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5B40482BD862C100EE4BB6 /* PersonView.swift in Sources */,
+				9C5B40492BD862C100EE4BB6 /* PersonViewModel.swift in Sources */,
 				9C5B40402BD74C1B00EE4BB6 /* PeopleCoordinator.swift in Sources */,
 				9C5B40392BD74AC700EE4BB6 /* TemplateCoordinator.swift in Sources */,
 				9C5B40072BD74A2500EE4BB6 /* BKSwiftyApp.swift in Sources */,
 				9C5B403B2BD74AC700EE4BB6 /* TemplateViewModel.swift in Sources */,
 				9C5B40422BD74C1B00EE4BB6 /* PeopleViewModel.swift in Sources */,
+				9C5B40472BD862C100EE4BB6 /* PersonCoordinator.swift in Sources */,
 				9C5B403A2BD74AC700EE4BB6 /* TemplateView.swift in Sources */,
 				9C5B40412BD74C1B00EE4BB6 /* PeopleView.swift in Sources */,
 			);

@@ -13,7 +13,9 @@ struct PeopleView: View {
     var body: some View {
         List {
             ForEach(viewModel.people, id: \.self) { person in
-                Text(person)
+                NavigationLink(person) {
+                    PersonCoordinator(person: person)
+                }
             }
         }
     }
