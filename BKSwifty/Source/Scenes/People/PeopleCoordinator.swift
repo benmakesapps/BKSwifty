@@ -1,6 +1,6 @@
 //
 //  PeopleCoordinator.swift
-//  CoreDataObservable
+//  BKSwifty
 //
 //  Created by Benjamin Kelsey on 4/20/24.
 //
