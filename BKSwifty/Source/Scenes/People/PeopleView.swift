@@ -22,5 +22,5 @@ struct PeopleView: View {
 }
 
 #Preview {
-    PeopleView(viewModel: PeopleView.ViewModel())
+    PeopleView(viewModel: PeopleView.ViewModel(persistenceManager: PersistenceManager()))
 }

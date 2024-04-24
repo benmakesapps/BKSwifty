@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct BKSwiftyApp: App {
+    let persistenceManager = PersistenceManager()
+    
     var body: some Scene {
         WindowGroup {
             PeopleCoordinator()
+                .environment(persistenceManager)
         }
     }
 }

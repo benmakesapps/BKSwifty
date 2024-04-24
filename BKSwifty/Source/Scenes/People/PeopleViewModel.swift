@@ -10,9 +10,12 @@ import Observation
 extension PeopleView {
     @Observable
     class ViewModel {
+        var persistenceManager: PersistenceManager
         var people: [String]
         
-        init(people: [String] = ["Ben", "Jessica", "Nora"]) {
+        init(persistenceManager: PersistenceManager,
+             people: [String] = ["Ben", "Jessica", "Nora"]) {
+            self.persistenceManager = persistenceManager
             self.people = people
         }
     }

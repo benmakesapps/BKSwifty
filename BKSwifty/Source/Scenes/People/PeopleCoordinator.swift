@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PeopleCoordinator: View {
+    @Environment(PersistenceManager.self)
+    var persistenceManager
+    
     var body: some View {
         NavigationStack {
             PeopleView(viewModel: createViewModel())
@@ -15,6 +18,6 @@ struct PeopleCoordinator: View {
     }
     
     func createViewModel() -> PeopleView.ViewModel {
-        .init()
+        .init(persistenceManager: persistenceManager)
     }
 }
