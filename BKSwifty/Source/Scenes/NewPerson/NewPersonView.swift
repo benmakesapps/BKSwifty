@@ -1,5 +1,5 @@
 //
-//  PersonView.swift
+//  NewPersonView.swift
 //  BKSwifty
 //
 //  Created by Benjamin Kelsey on 4/20/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonView: View {
+struct NewPersonView: View {
     @Environment(\.dismiss) 
     var dismiss
     
@@ -20,16 +20,20 @@ struct PersonView: View {
     
     var body: some View {
         TextField(text: $text) {
-            Text(viewModel.person.name ?? "--")
+            Text("New person")
         }
         .padding()
         .onSubmit {
             do {
-                try viewModel.updatePerson(with: text)
+                try viewModel.savePerson(text)
                 dismiss()
             } catch {
                 errorManager.show(error.localizedDescription)
             }
         }
     }
+}
+
+#Preview {
+    NewPersonView(viewModel: NewPersonView.ViewModel(persistenceManager: PersistenceManager()))
 }

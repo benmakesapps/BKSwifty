@@ -8,13 +8,19 @@
 import SwiftUI
 
 @main
+
 struct BKSwiftyApp: App {
     let persistenceManager = PersistenceManager()
+    @State var errorManager = ErrorManager()
     
     var body: some Scene {
         WindowGroup {
             PeopleCoordinator()
                 .environment(persistenceManager)
+                .environment(errorManager)
+                .alert(isPresented: $errorManager.showError) {
+                    Alert(title: Text(errorManager.message ?? "Error"))
+                }
         }
     }
 }

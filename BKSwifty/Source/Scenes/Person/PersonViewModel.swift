@@ -10,10 +10,21 @@ import Observation
 extension PersonView {
     @Observable
     class ViewModel {
-        let person: String
+        let person: Person
+        let persistenceManager: PersistenceManager
         
-        init(person: String) {
+        init(person: Person,
+             persistenceManager: PersistenceManager) {
             self.person = person
+            self.persistenceManager = persistenceManager
+        }
+        
+        func updatePerson(with text: String) throws {
+            guard !text.isEmpty else {
+                throw "Name cannot be empty."
+            }
+            person.name = text
+            try persistenceManager.save()
         }
     }
 }

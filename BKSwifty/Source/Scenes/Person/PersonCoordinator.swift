@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct PersonCoordinator: View {
-    let person: String
+    @Environment(PersistenceManager.self)
+    var persistenceManager
+    
+    let person: Person
     
     var body: some View {
         PersonView(viewModel: createViewModel())
     }
     
     func createViewModel() -> PersonView.ViewModel {
-        .init(person: self.person)
+        .init(person: self.person,
+        persistenceManager: persistenceManager)
     }
 }
